@@ -20,8 +20,80 @@ modules:
     repos:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
-      # - micro
-      # - starship
+
+      # codecs
+      - gstreamer1-plugin-openh264
+      # - gstreamer1-libav.x86_64
+      - gstreamer1-plugins-good
+      - gstreamer1-plugins-bad-free
+      - gstreamer1-plugins-ugly
+      - gstreamer1-plugins-ugly-free
+      - gstreamer1-plugins-bad-freeworld
+      - gstreamer1-plugins-bad-free-extras
+      - gstreamer1-plugins-bad-freeworld
+      - gstreamer1-plugins-good-extras
+      - gstreamer1-vaapi
+
+      # gnome stuff
+      # - chrome-gnome-shell
+      - gnome-tweaks
+      - gnome-firmware
+      - gnome-network-displays
+
+      # yubikey
+      - ykpers
+
+      # cli tools
+      - vim-enhanced
+      - iotop
+      - screen
+      - ripgrep
+      - sshfs
+      - powertop
+      - jq
+      - fd-find
+      - fzf
+      - zsh
+      - rclone
+      - wl-clipboard
+      - tmate
+      - ncdu
+      - lsd
+      - ddcutil
+      - rclone
+      - autojump-zsh
+      - distrobox
+
+
+      # backup
+      - borgbackup
+
+      # openssl is needed for GSConnect
+      - openssl
+    
+      # developer stuff
+      - git
+      - git-lfs
+      - meld
+      # - regexxer
+      - gitk
+      - pipx
+      - python3-cookiecutter
+      - telnet
+      - skopeo
+
+      - meld
+
+      # - python3.8
+      # - python3.9
+
+      # - gcc
+      # - gcc-c++
+      # - redhat-rpm-config
+      # - make
+      - cargo
+
+      - podman
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
@@ -36,7 +108,26 @@ modules:
       # repo-name: flathub
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
-        # - org.mozilla.firefox
+        - org.gimp.GIMP
+        - org.inkscape.Inkscape
+        - org.libreoffice.LibreOffice
+
+        - com.mattjakeman.ExtensionManager
+
+        - com.github.jeromerobert.pdfarranger
+        - com.github.tchx84.Flatseal
+        - com.github.wwmm.easyeffects
+        - org.gnome.design.Contrast
+        - org.gustavoperedo.FontDownloader
+
+        - org.gnome.gitlab.YaLTeR.Identity
+        - com.belmoussaoui.Obfuscate
+
+        - com.borgbase.Vorta
+
+        - org.mozilla.firefox
+
+        - com.jgraph.drawio.desktop
         # - org.gnome.Loupe
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
       # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
